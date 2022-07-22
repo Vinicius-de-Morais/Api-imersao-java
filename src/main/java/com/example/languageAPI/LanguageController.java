@@ -22,6 +22,11 @@ public class LanguageController {
     @Autowired
     private LanguageRepository repository;
 
+    // homepage
+    @GetMapping("/")
+    public String home(){
+        return "Hi!!! This is an API, to acess the languages JSON go to /languages \nThanks for acessing :D";
+    }
     // get the data
     @GetMapping("/languages")
     public List<Language> getLanguages(){
